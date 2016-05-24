@@ -1,0 +1,38 @@
+{
+  "brand": "lx",
+  "image_uuid": "f09ac970-e788-4607-5368-49a8a81bb42d",
+  "cpu_shares": 1000,
+  "max_lwps": 2048,
+  "max_msg_ids": 4096,
+  "max_sem_ids": 4096,
+  "max_shm_ids": 4096,
+  "zfs_io_priority": 1000,
+  "docker": true,
+  "maintain_resolvers": true,
+  "kernel_version": "3.13.0",
+  "resolvers": [
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "alias": "elastic3",
+  "nics": [
+    {
+      "interface": "eth0",
+      "nic_tag": "admin",
+      "gateway": "192.168.11.254",
+      "netmask": "255.255.255.0",
+      "ip": "192.168.11.99",
+      "primary": true
+    }
+  ],
+  "cpu_cap": 800,
+  "max_shm_memory": 4096,
+  "max_physical_memory": 4096,
+  "max_locked_memory": 4096,
+  "max_swap": 18432,
+  "tmpfs": 4096,
+  "internal_metadata": {
+    "docker:cmd": "[\"/entrypoint.sh\", \"\"]"
+  },
+  "quota": 7
+}

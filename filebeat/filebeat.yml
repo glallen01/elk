@@ -1,0 +1,40 @@
+# vim: ts=2 sw=2 sts=2 et
+filebeat:
+  prospectors:
+    - input_type: log
+      paths: 
+        - /pool/home/gla/bro/conn.log
+      exclude_lines: ["^#"]
+      fields_under_root: true
+      document_type: bro_conn
+    - input_type: log
+      paths: 
+        - /pool/home/gla/bro/dns.log
+      exclude_lines: ["^#"]
+      fields_under_root: true
+      document_type: bro_dns
+
+
+#output:
+#  console:
+#    pretty: true
+#
+output:
+  logstash:
+    hosts: ["localhost:5514"]
+
+#  elasticsearch:
+#    hosts: [
+#      "192.168.11.97:9200",
+#      "192.168.11.98:9200",
+#      "192.168.11.99:9200",
+#      ]
+#    template.name: "filebeat"
+#    template.path: "filebeat.template.json"
+#    template.overwrite: false
+#    protocol: "http"
+#    username: "elastic"
+#    password: "changeme"
+#
+logging.level: debug
+logging.to_syslog: true

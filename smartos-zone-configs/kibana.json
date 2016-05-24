@@ -1,0 +1,40 @@
+{
+  "brand": "lx",
+  "image_uuid": "264e2d81-2ebd-c870-1dce-4fa103b20417",
+  "cpu_shares": 1000,
+  "max_lwps": 2048,
+  "max_msg_ids": 4096,
+  "max_sem_ids": 4096,
+  "max_shm_ids": 4096,
+  "zfs_io_priority": 1000,
+  "dns_domain": "local",
+  "docker": true,
+  "restart_init": false,
+  "init_name": "/native/usr/vm/sbin/dockerinit",
+  "maintain_resolvers": true,
+  "kernel_version": "3.13.0",
+  "resolvers": [
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "alias": "kibana",
+  "nics": [
+    {
+      "interface": "eth0",
+      "nic_tag": "admin",
+      "gateway": "192.168.11.254",
+      "netmask": "255.255.255.0",
+      "ip": "192.168.11.100",
+      "primary": true
+    }
+  ],
+  "cpu_cap": 800,
+  "max_shm_memory": 4096,
+  "max_physical_memory": 4096,
+  "max_locked_memory": 4096,
+  "max_swap": 18432,
+  "internal_metadata": {
+    "docker:cmd": "[\"/entrypoint.sh\", \"\"]"
+  },
+  "quota": 7
+}

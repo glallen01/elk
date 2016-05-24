@@ -1,0 +1,34 @@
+{
+  "alias": "elastic1",
+  "image_uuid": "f09ac970-e788-4607-5368-49a8a81bb42d",
+  "nics": [
+    {
+      "nic_tag": "admin",
+      "gateway": "192.168.11.254",
+      "netmask": "255.255.255.0",
+      "ip": "192.168.11.98",
+      "primary": true
+    }
+  ],
+  "brand": "lx",
+  "kernel_version": "3.13.0",
+  "docker": true,
+  "cpu_shares": 1000,
+  "cpu_cap": 800,
+  "max_lwps": 2048,
+  "zfs_io_priority": 1000,
+  "max_shm_memory": 4096,
+  "max_physical_memory": 4096,
+  "max_locked_memory": 4096,
+  "max_swap": 19456,
+  "tmpfs": 4096,
+  "maintain_resolvers": true,
+  "quota": 7,
+  "resolvers": [
+    "8.8.8.8",
+    "8.8.4.4"
+  ],
+  "internal_metadata": {
+    "docker:cmd": "[\"/entrypoint.sh\", \"\"]"
+  }
+}
